@@ -25,13 +25,13 @@ jobs:
         repository: csiro-mlai/physics_in_the_browser
         ssh-key: ${{ secrets.SSH_AUTH_KEY }}
         path: ./main
-    - run: cd ./main    
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: main/package-lock.json
+    - run: cd ./main    
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
