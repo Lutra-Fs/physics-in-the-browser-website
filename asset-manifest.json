@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/physics-in-the-browser-website/static/css/main.073c9b0a.css",
-    "main.js": "/physics-in-the-browser-website/static/js/main.faafa8f6.js",
-    "static/js/787.1d3d1891.chunk.js": "/physics-in-the-browser-website/static/js/787.1d3d1891.chunk.js",
-    "static/media/logo.svg": "/physics-in-the-browser-website/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/physics-in-the-browser-website/index.html",
-    "main.073c9b0a.css.map": "/physics-in-the-browser-website/static/css/main.073c9b0a.css.map",
-    "main.faafa8f6.js.map": "/physics-in-the-browser-website/static/js/main.faafa8f6.js.map",
-    "787.1d3d1891.chunk.js.map": "/physics-in-the-browser-website/static/js/787.1d3d1891.chunk.js.map"
+    "main.css": "/website/static/css/main.073c9b0a.css",
+    "main.js": "/website/static/js/main.f6dc367b.js",
+    "static/js/787.1d3d1891.chunk.js": "/website/static/js/787.1d3d1891.chunk.js",
+    "static/media/logo.svg": "/website/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/website/index.html",
+    "main.073c9b0a.css.map": "/website/static/css/main.073c9b0a.css.map",
+    "main.f6dc367b.js.map": "/website/static/js/main.f6dc367b.js.map",
+    "787.1d3d1891.chunk.js.map": "/website/static/js/787.1d3d1891.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.faafa8f6.js"
+    "static/js/main.f6dc367b.js"
   ]
 }
