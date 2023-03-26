@@ -46,6 +46,7 @@ jobs:
     - run: npm run build --if-present
       working-directory: ./main
     - run: cp -r ./main/out ./
+    - run: touch ./out/.nojekyll
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4.4.1
       with:
