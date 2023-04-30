@@ -28,6 +28,7 @@ jobs:
       with:
         repository: techlauncher-mlai-edge-physics/physics_in_the_browser
         ssh-key: ${{ secrets.SSH_AUTH_KEY }}
+        ref: 'simulator-fix'
         path: ./main
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
