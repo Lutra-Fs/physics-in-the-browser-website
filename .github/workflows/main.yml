@@ -24,10 +24,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        path: ./website
     - uses: actions/checkout@v3
       with:
         repository: techlauncher-mlai-edge-physics/physics_in_the_browser
-        ssh-key: ${{ secrets.SSH_AUTH_KEY }}
         path: ./main
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
@@ -35,29 +36,15 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: main/package-lock.json
-    - name: Cache Next.js 
-      uses: actions/cache@v3
-      with:
-        # See here for caching with `yarn` https://github.com/actions/cache/blob/main/examples.md#node---yarn or you can leverage caching with actions/setup-node https://github.com/actions/setup-node
-        path: |
-          ~/main/node_modules
-          ~/main/.npm
-          ${{ github.workspace }}/main/.next/cache
-        # Generate a new cache whenever packages or source files change.
-        key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-        # If source files changed but packages didn't, rebuild from a prior cache.
-        restore-keys: |
-          ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
     - run: npm ci
       working-directory: ./main
     - run: npm run build --if-present
       working-directory: ./main
-    - run: cp -r ./main/dist ./
-    - run: touch ./dist/.nojekyll
+    - run: touch ./main/dist/.nojekyll
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4.4.1
       with:
         branch: gh-pages
         # The folder in your repository that you want to deploy. If your build script compiles into a directory named build you would put it here. Folder paths cannot have a leading / or ./. If you wish to deploy the root directory you can place a . here.
-        folder: ./dist
+        folder: ./main/dist
         # If you would like to push the contents of the deployment folder into a specific directory on the deployment branch you can specify it here.
