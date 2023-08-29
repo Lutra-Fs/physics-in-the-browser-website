@@ -3903,7 +3903,7 @@ To build and run the application locally, see our <a href="docs/gettingstarted.m
 <h2>Contributing</h2>
 <p>See our <a href="CONTRIBUTION.md">contribution guide</a> to get started.</p>
 <h2>License</h2>
-<p>Distributed under the <em>placeholder</em> License. See <code>LICENSE</code> for more information.</p>`,poe=Or.div`
+<p>Distributed under the BSD-3 Clause License. See <code>LICENSE</code> for more information.</p>`,poe=Or.div`
   text-align:justify;
   margin-left: 25%;
   margin-right: 25%;
